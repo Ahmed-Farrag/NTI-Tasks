@@ -1,0 +1,24 @@
+{{>header}}
+{{>navbar}}
+<section class="container my-5">
+    <h3 class="text-primary">Edit User</h3>
+
+<form method="post">
+    <div class="mb-3 ">
+        <input name="title" placeholder="title" class="form-control" value="{{user.title}}">
+    </div>
+    <div class="mb-3">
+        <input name="content" placeholder="content" class="form-control" value={{user.content}}>
+    </div>
+    <div class="mb-3">
+        <input name="date" placeholder="date" class="form-control" value="{{user.date}}">
+    </div>
+
+    <div class="mb-3">
+        <input type="submit" value="add User" class="btn btn-primary">
+    </div>
+</form>
+
+</section>
+
+{{>footer}}
