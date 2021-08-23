@@ -1,0 +1,44 @@
+{{>header}}
+{{>navbar}}
+<section class="container my-5">
+    <div class="my-3">
+        <a href="/add" class="btn btn-primary">add</a>
+    </div>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>content</th>
+                <th>data</th>
+                <th>action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#if isEmpty}}
+            
+            <tr>
+                <td colspan="5" class="alert alert-danger">no users to show</td>
+            </tr>
+            {{/if}}
+    {{#each allusers}}
+        
+            <tr>
+                <td>{{this._id}}</td>
+                <td>{{this.title}}</td>
+                <td>{{this.content}}</td>
+                <td>{{this.date}}</td>
+                <td>
+                    <a href="edit/{{this._id}}" class="btn btn-warning mx-3">edit</a>
+                    
+                  
+
+                    <a class="btn btn-danger mx-3" href="delete/{{this._id}}">delete</a>
+                  
+                </td>
+            </tr>
+
+    {{/each}}
+        </tbody>
+    </table>
+</section>
